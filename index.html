@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-	
+	<link rel="stylesheet" href="./css/swiper.min.css">
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<!-- Latest compiled JavaScript -->
@@ -183,6 +183,19 @@
 			width: 100%;
 
 		}
+
+    .swiper-container {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+
+    }
 
 	</style>
 
@@ -612,67 +625,50 @@
 			I am really proud of some the photos that I have clicked. Sharing them here with you.
 
 			<br><br>
-      <br><br>
-
-
-			<div class="row">
-
-				<a href="" target="_blank">
-
-					<div class="col-md-5" style="height:200px; background-image: url('images/pix1.jpg');background-size: cover; background-repeat: no-repeat;border-radius:5px;"></div>
-
-				</a>
-
-				<div class="col-md-2" style="height:200px;"></div>
-
-				<a href="" target="_blank">
-
-					<div class="col-md-5" style="height:200px; background-image: url('images/pix2.jpg');background-size: cover; background-repeat: no-repeat;border-radius:5px;"></div>
-
-				</a>
-
-			</div>
-
-			<br><br>
-
-			<div class="row">
-
-				<a href=" target="_blank">
-
-					<div class="col-md-5" style="height:200px; background-image: url('images/pix3.jpg');background-size: cover; background-repeat: no-repeat;border-radius:5px;"></div>
-
-				</a>
-
-				<div class="col-md-2" style="height:200px;"></div>
-
-				<a href="" target="_blank">
-
-					<div class="col-md-5" style="height:200px; background-image: url('images/pix4.jpg');background-size: cover; background-repeat: no-repeat;border-radius:5px;"></div>
-
-				</a>
-
-			</div>
-
-			<br><br>
-
-			Find the full list of photos on 500px page here.
-
-			<br><br>
-
-			<div class="row">
-
-				<a href="" target="_blank">
-
-					<div class="col-md-12" style="height:80px; background-image: url('images/500px-thumbnail.png'); background-repeat: no-repeat;border-radius:5px;"></div>
-
-				</a>
-
-			</div>
-
-		</div>
-
+    
 		<div class="col-md-3"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6">
 
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" style="background-image:url(./img/pix1.jpg)"></div>
+					<div class="swiper-slide" style="background-image:url(./img/pix2.jpg)"></div>
+					<div class="swiper-slide" style="background-image:url(./img/pix3.jpg)"></div>
+					<div class="swiper-slide" style="background-image:url(./img/pix4.jpg)"></div>
+					<div class="swiper-slide" style="background-image:url(./img/pix5.jpg)"></div>
+
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
+			</div>
+			<!-- Swiper JS -->
+			  <script src="./js/swiper.min.js"></script>
+
+			  <!-- Initialize Swiper -->
+			  <script>
+			    var swiper = new Swiper('.swiper-container', {
+			      effect: 'coverflow',
+			      grabCursor: true,
+			      centeredSlides: true,
+			      slidesPerView: 'auto',
+			      coverflowEffect: {
+			        rotate: 50,
+			        stretch: 0,
+			        depth: 100,
+			        modifier: 1,
+			        slideShadows : true,
+			      },
+			      pagination: {
+			        el: '.swiper-pagination',
+			      },
+			    });
+			  </script>
+			</div>
+			<div class="col-md-3"></div>
+		</div>
 	</div>
 
 	<br><br>
